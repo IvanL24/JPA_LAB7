@@ -33,6 +33,16 @@ public class UserServlet extends HttpServlet {
             throws ServletException, IOException {
         String action = request.getParameter("action");
         String query = request.getQueryString();
+        UserService us = new UserService();
+        
+        if (action != null && action.contains("delete?")){
+            try {
+                String email = request.getParameter("email");
+                boolean deleted = us.delete(email);
+            } catch (Exception ex) {
+                Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
         
         try {
