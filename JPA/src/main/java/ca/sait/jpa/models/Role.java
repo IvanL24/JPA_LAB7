@@ -1,14 +1,29 @@
-package ca.sait.jdbc.models;
+package ca.sait.jpa.models;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.*;
 
 /**
  *Represents a role.
  * 
  */
+@Entity
+@Table(name = "role")
+@NamedQueries({
+    @NamedQuery(name = "Role.findAll", query = "SELECT r FROM Role r")
+})
 public class Role implements Serializable {
+    @Id
+    @Basic
+    @Column(name = "role_id")
     private int roleId;
+    
+    @Column(name = "role_name")
     private String roleName;
+    
+    @OneToMany
+    private List<User> users;
     
     public Role(){
     

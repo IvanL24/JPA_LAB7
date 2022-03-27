@@ -1,7 +1,7 @@
-package ca.sait.jdbc.services;
+package ca.sait.jpa.services;
 
-import ca.sait.jdbc.dataaccess.RoleDB;
-import ca.sait.jdbc.models.Role;
+import ca.sait.jpa.dataaccess.RoleDB;
+import ca.sait.jpa.models.Role;
 import java.util.List;
 
 public class RoleService {

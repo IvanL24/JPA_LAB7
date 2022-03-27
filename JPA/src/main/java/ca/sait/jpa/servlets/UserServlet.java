@@ -1,9 +1,9 @@
-package ca.sait.jdbc.servlets;
+package ca.sait.jpa.servlets;
 
-import ca.sait.jdbc.models.Role;
-import ca.sait.jdbc.models.User;
-import ca.sait.jdbc.services.RoleService;
-import ca.sait.jdbc.services.UserService;
+import ca.sait.jpa.models.Role;
+import ca.sait.jpa.models.User;
+import ca.sait.jpa.services.RoleService;
+import ca.sait.jpa.services.UserService;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

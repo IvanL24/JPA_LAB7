@@ -1,8 +1,8 @@
-package ca.sait.jdbc.services;
+package ca.sait.jpa.services;
 
-import ca.sait.jdbc.dataaccess.UserDB;
-import ca.sait.jdbc.models.Role;
-import ca.sait.jdbc.models.User;
+import ca.sait.jpa.dataaccess.UserDB;
+import ca.sait.jpa.models.Role;
+import ca.sait.jpa.models.User;
 import java.util.List;
 
 public class UserService {

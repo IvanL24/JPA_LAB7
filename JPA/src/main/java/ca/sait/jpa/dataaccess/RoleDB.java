@@ -1,6 +1,6 @@
-package ca.sait.jdbc.dataaccess;
+package ca.sait.jpa.dataaccess;
 
-import ca.sait.jdbc.models.Role;
+import ca.sait.jpa.models.Role;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
