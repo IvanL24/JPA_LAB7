@@ -1,5 +1,5 @@
 # JPA_LAB7
-##CPRG352 lab 7
+## CPRG352 lab 7
 
 Replacing data access layer written in JDBC with JPA.
 
