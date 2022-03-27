@@ -105,11 +105,9 @@ public class UserServlet extends HttpServlet {
                 Role role = new Role(roleId, roleName);
                 UserService us = new UserService();
                 us.insert(email, active, firstName, lastName, password, role);
-                request.setAttribute("message", "user has been updated");
                 
             }catch (Exception ex) {
                 Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
-                request.setAttribute("message", "user was not updated");
             }
         } else if(action != null && action.contains("edit?")){
             try{
@@ -149,18 +147,15 @@ public class UserServlet extends HttpServlet {
                 Role role = new Role(roleId, roleName);
                 UserService us = new UserService();
                 us.update(email, active, firstName, lastName, password, role);
-                request.setAttribute("message", "user has been updated");
                 
             }catch (Exception ex) {
                 Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
-                request.setAttribute("message", "user was not updated");
             }
         }  else if(action != null && action.contains("delete?")){
             try{
                 String email = action.split("\\?", 2)[1];
                 UserService us = new UserService();
                 us.delete(email);
-                request.setAttribute("message", "user has been deleted");
                 
             }catch(Exception ex){
                 Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
