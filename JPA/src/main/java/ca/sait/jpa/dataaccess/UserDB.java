@@ -7,8 +7,6 @@ import javax.persistence.*;
 public class UserDB {
 
     public List<User> getAll() throws Exception {
-        
-        
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         
         try {

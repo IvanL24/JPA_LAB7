@@ -15,12 +15,12 @@ import javax.persistence.*;
 })
 public class User implements Serializable {
     @Id
-    @Basic
-    @Column(name = "email")
+    @Basic(optional = false)
+    @Column
     private String email;
     
-    @Column(name = "active")
-    private boolean active;
+    @Column
+    private boolean active; 
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
@@ -29,7 +29,7 @@ public class User implements Serializable {
     private String password;
     
     @ManyToOne(targetEntity = Role.class)
-    @JoinColumn(name = "role", referencedColumnName = "roled_id")
+    @JoinColumn(name = "role", referencedColumnName = "role_id")
     private Role role;
             
     public User(){
